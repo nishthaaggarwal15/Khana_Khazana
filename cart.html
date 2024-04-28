@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" type="image/x-icon">
+    <title>🍴Khana_Khazana🍴- Cart</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logoimg"   src="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" alt="" srcset="">
+            <div class="logo">
+               
+                <a href="home.html"> 🍴Khana_Khazana🍴</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+               
+                <li><a href="contact.html">Feedback</a></li>
+                <li><a href="signing.html">Sign Up</a></li>
+                <li ><a href="web.html"> Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>  MENU </h1>
+ <div id="dishess"><h2 id="pizza"> Pizza </h2>
+    <p>Delicious and cheesy pizza topped with your favorite ingredients.</p>
+    <span class="price">Rs:1200</span> <br>
+    <div id="Pizza">
+                <button class="dishbutton"  onclick="addtocart1()">Add to cart</button><hr>
+            </div>
+                
+            
+                <h2 id="burger"> Burger </h2>
+                <p>Juicy burger with fresh ingredients and a side of crispy fries.</p>
+    <span class="price">Rs:500</span> <br>
+                <button class="dishbutton"  onclick="addtocart2()">Add to cart</button><hr>
+                <h2 id="pasta">Pasta</h2>
+                <p>Authentic Italian pasta served with a variety of sauces.</p>
+    <span class="price">Rs:1000</span> <br>
+                <button class="dishbutton"  onclick="addtocart3()">Add to cart</button><hr>
+                <h2 id="noodles">Noodles</h2>
+                <p> There's nothing in life that a bowl of noodles can't fix.</p>
+    <span class="price">Rs:800</span> <br>
+                <button class="dishbutton"  onclick="addtocart4()">Add to cart</button><hr>
+    
+                <h2 id="momos"> Momos</h2>
+                <p>These steamed dumplings are filled with spiced ground beef or lamb.</p
+    <span class="price">Rs:1500</span> <br>
+                <button class="dishbutton"  onclick="addtocart5()">Add to cart</button><hr>
+                  <h2 id="cocacola">Coca Cola</h2>
+                  <p>Our signature soft drink is made from real sugarcane juice.</p>
+                <span class="price">Rs:100</span> <br>
+                <button class="dishbutton"  onclick="addtocart6()">Add to cart</button><hr>
+                <h2 id="coffee">Coffee</h2>
+                <p>A perfect blend of coffee, roasted for perfection.</p>
+                <span class="price">Rs:200</span> <br>
+                <button class="dishbutton"  onclick="addtocart7()">Add to cart</button><hr>
+                <h2 id="tea">Tea</h2>
+                <p>Experience the taste of India with our homemade herbal teas.</p>
+                <span class="price">Rs:50</span> <br>
+                <button class="dishbutton"  onclick="addtocart8()">Add to cart</button><hr>
+                <h2 id="sushiroll">Sushi Roll</h2>
+                <p>Fresh sashimi rolls with cucumber, avocado, and wasabi aioli.</p>
+                <span class="price">Rs:900</span> <br>
+                <button class="dishbutton"  onclick="addtocart9()">Add to cart</button><hr>
+                <h2 id="salad">Salad</h2>
+                <p>Tender greens mixed with grilled chicken and creamy dressing.</p>
+                <span class="price">Rs:400</span> <br>
+                <button class="dishbutton"  onclick="addtocart10()">Add to cart</button> <br> </div>
+                
+
+
+
+            <section id="ordernow">
+                    <h2> Quantity:</h2>
+                    <h2 id="cart"></h2>
+                    <h2> Items:</h2>
+                    <h2 id="items"></h2>
+                    
+                    <h2>
+                        Total Amount is :</h2>
+                     <h2 id="amt"></h2> <br>
+                     <a href="order.html" class="orderbutton"> Buy Now </a>
+
+                      
+
+                </section>
+
+
+                <!-- <table>
+                    <thead>
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Items</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                    </tbody>
+                </table> -->
+
+
+<hr>
+
+
+
+    <!-- <p id="amt"></p> -->
+    <footer>
+        <p>&copy; 2023 🍴Khana_Khazana🍴</p>
+    </footer>
+
+</body>
+</html>
+
+<style> 
+
+
+#dishess{
+     /* background-color: #a8a7a7;  */
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+  
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+ h1{
+    text-align: center;
+ }
+header {
+    background-color: black;
+    color: rgb(8, 8, 8);
+    padding: 10px 0;
+  
+     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#dishess p{
+    font-weight: bold;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#logoimg{
+    height :4rem ;
+    border-radius: 200px;
+    margin-right: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: black; ;
+     border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color:white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+.orderbutton{
+    display: inline-block;
+        padding: 5px 10px;
+        background-color: black;
+        height: 50px;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+        font-size: 25px
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(154, 166, 154); 
+
+}
+
+.dishbutton{
+    display: inline-block;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: 15px;
+}
+
+span{
+    font-weight: bold;
+    
+}
+section{
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+      /* background-color: #a8a7a7;   */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+#ordernow{
+  height: 50px;
+}
+
+footer {
+    background-color:black;
+    color: white;
+    text-align: center;
+    height: 35px;
+    padding: 5px 0;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.dishbutton:hover{
+    background-color: ;
+}
+.pizza{
+    background-image: url(https://img.freepik.com/free-photo/freshly-italian-pizza-with-mozzarella-cheese-slice-generative-ai_188544-12347.jpg);
+}
+
+
+tr {
+    font-size: 50px;
+}
+
+td{
+    font-size: 30px;
+}
+
+table {
+    ba
+}
+
+
+
+</style>
+  
+<script >
+var count = 0;
+var amount1 =0;
+
+
+function addtocart1() {
+
+ count = count + 1;
+ amount1= amount1 + 1200;
+ var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+
+   var x =  document.getElementById("pizza")
+
+   var td2 = document.createElement("td")
+   td2.innerText = x.innerText
+
+    items.append(td2)
+
+   document.querySelector("items").appendr(items)
+
+
+}
+
+
+
+var count = 0;
+var amount1 =0;
+
+function addtocart2() {
+
+ count = count + 1;
+ amount1= amount1 + 500;
+
+var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+   var y =  document.getElementById("burger")
+
+   var td2 = document.createElement("td")
+   td2.innerText = y.innerText
+
+ items.append( td2)
+
+   document.querySelector("items").append(items)
+
+}
+
+
+var count = 0;
+var amount1 =0;
+
+function addtocart3() {
+
+ count = count + 1;
+ amount1= amount1 + 1000;
+
+
+   var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1;
+
+var z =  document.getElementById("pasta")
+var td2 = document.createElement("td")
+   td2.innerText = z.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+
+
+}
+
+var count = 0;
+var amount1 =0;
+
+function addtocart4() {
+
+ count = count + 1;
+ amount1= amount1 + 800;
+
+
+   var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+   var a =  document.getElementById("noodles")
+var td2 = document.createElement("td")
+   td2.innerText = a.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+}
+
+var count = 0;
+var amount1 =0;
+
+function addtocart5() {
+
+ count = count + 1;
+ amount1= amount1 + 1500;
+
+
+   var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+
+   var b =  document.getElementById("momos")
+var td2 = document.createElement("td")
+   td2.innerText = b.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+}
+function addtocart6() {
+
+count = count + 1;
+amount1= amount1 + 100;
+
+
+  var cart = document.getElementById("cart")
+  cart.innerText  = count
+
+  var amount = document.getElementById("amt")
+  amount.innerText = amount1
+  var c =  document.getElementById("cocacola")
+var td2 = document.createElement("td")
+   td2.innerText = c.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+  
+}
+function addtocart7() {
+
+count = count + 1;
+amount1= amount1 + 200;
+
+
+  var cart = document.getElementById("cart")
+  cart.innerText  = count
+
+  var amount = document.getElementById("amt")
+  amount.innerText = amount1
+  var d =  document.getElementById("coffee")
+var td2 = document.createElement("td")
+   td2.innerText = d.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+
+  
+  
+}
+function addtocart8() {
+
+count = count + 1;
+amount1= amount1 + 50;
+
+
+  var cart = document.getElementById("cart")
+  cart.innerText  = count
+
+  var amount = document.getElementById("amt")
+  amount.innerText = amount1
+  var e =  document.getElementById("tea")
+var td2 = document.createElement("td")
+   td2.innerText = e.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+
+  
+}
+function addtocart9() {
+
+count = count + 1;
+amount1= amount1 + 900;
+bag="";
+
+
+  var cart = document.getElementById("cart")
+  cart.innerText  = count
+
+  var amount = document.getElementById("amt")
+  amount.innerText = amount1
+  var f =  document.getElementById("sushiroll")
+var td2 = document.createElement("td")
+   td2.innerText = f.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+
+
+}
+
+function addtocart10() {
+
+count = count + 1;
+amount1= amount1 + 400;
+bag="";
+
+
+  var cart = document.getElementById("cart")
+  cart.innerText  = count
+
+  var amount = document.getElementById("amt")
+  amount.innerText = amount1
+  var g =  document.getElementById("salad")
+var td2 = document.createElement("td")
+   td2.innerText = g.innerText
+   items.append( td2)
+
+document.querySelector("items").append(items)
+
+}
+
+</script>

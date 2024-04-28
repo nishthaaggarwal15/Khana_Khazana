@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - 🍴Khana_Khazana🍴</title>
+    <link rel="shortcut icon" href="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img  id="logoimg"   src="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" alt="" srcset="">
+            <div class="logo">
+               
+                <a id="logoname"  href="home.html"> 🍴Khana_Khazana🍴</a>
+            </div>
+            <ul class="nav-links">
+                
+                <li><a href="home.html">Home</a></li>
+                <li><a href="web.html">Menu</a></li>
+                <li><a href="signing.html">Sign Up</a></li>
+                <li  id="cart"><a href="cart.html"> 🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Feedback</h1>
+        <p>We'd love to hear from you!</p>
+        <form name="submit-to-google-sheet">
+            <label for="rating"> <h3>Rate us:</h3></label>
+            <select id="rating" name="rating">
+                <option value="5">5 (Excellent)</option>
+                <option value="4">4 (Good)</option>
+                <option value="3">3 (Average)</option>
+                <option value="2">2 (Below Average)</option>
+                <option value="1">1 (Poor)</option>
+            </select>
+
+            <label for="comment"> <h3>Leave a comment:</h3></label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+
+            <button type="submit" class="submit-button">Submit Rating</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 🍴Khana_Khazana🍴</p>
+    </footer>
+</body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxgjdaL0iC4VP5POykXj6DQ4dibcZ7-Fq56nphF5kz5Ejj1EzfYmLayNY7ozyjl0xVN/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</html>
+
+<style>
+ body{
+    background-color: #a8a7a7;
+ }
+
+header {
+    background-color: black;
+    color: rgb(8, 8, 8);
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logoimg{
+    height :4rem ;
+    border-radius: 200px;
+    margin-right: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: black; 
+  
+    /* border-radius: 100px; */
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: black; 
+}
+.ratings {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.ratings h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ratings p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.ratings form {
+    text-align: left;
+}
+
+.ratings label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.ratings select,
+.ratings textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+
+.contact p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+form .submit-button {
+    background-color:black; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+form .submit-button:hover {
+    background-color:black; 
+}
+footer{
+ 
+ color: black;
+ text-align: center;
+
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+</style>

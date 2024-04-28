@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🍴Khana_Khazana🍴 -Menu</title>
+    <link rel="stylesheet" href="web.css">
+    <link id="pic" rel="shortcut icon" href="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logoimg"   src="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" alt="" srcset="">
+            <div class="logo">
+               
+                <a href="home.html"> 🍴Khana_Khazana🍴</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+               
+                <li><a href="contact.html">Feedback</a></li>
+                <li><a href="signing.html">Sign Up</a></li>
+                <li  id="cart"><a href="cart.html"> 🛒</a></li>
+            </ul>         </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Our Menu </h1>
+        <p>Discover a world of flavors.</p>
+    </section>
+   <center> <h2 class="fdheading">Featured-dishes</h2></center>
+    <section class="featured-dishes">
+        
+        <div class="dish">
+            <img height="340px" src="https://giffiles.alphacoders.com/150/150977.gif" alt="Pizza">
+            <h2 id="pizza"> Pizza</h2>
+            <p>Delicious and cheesy pizza topped with your favorite ingredients.</p> <br>
+            <span class="price">Rs:1200</span> <br>
+            <button class="dishbutton"  onclick="addtocart1()">Add to cart</button>
+            
+        </div>
+        <div class="dish">
+            <img height="340px"  src="https://gifdb.com/images/thumbnail/hasbulla-chef-serving-food-steak-restaurant-rghr6j9c070xy6dk.gif" alt="Burger">
+            <h2 id="burger">Burger</h2>
+            <p>Juicy burger with fresh ingredients and a side of crispy fries.</p> <br>
+            <span class="price">Rs:500</span> <br>
+            <button class="dishbutton"    onclick="addtocart2()">Add to cart</button>
+        </div>
+        
+        <div class="dish">
+            <img src="https://media.tenor.com/xBx81SFaqCEAAAAC/mac-and-cheese-pasta.gif" alt="Pasta">
+            <h2 id="pasta">Pasta</h2>
+            <p>Authentic Italian pasta served with a variety of sauces.</p> <br>
+            <span class="price">Rs:1000</span> <br>
+            <button class="dishbutton"   onclick="addtocart3()">Add to cart</button>
+        </div>
+        <div class="dish">
+            <img  src="https://cdn.shopify.com/s/files/1/0425/2699/8690/files/15_Noodle_Gifs_That_Are_Too_Beautiful_For_This_World_480x480.gif?v=1652938713" alt="Noodles">
+            <h2 id="noodles">Noodles</h2>
+            <p> There's nothing in life that a bowl of noodles can't fix.</p> <br>
+            <span class="price">Rs:800</span> <br>
+            <button class="dishbutton"   onclick="addtocart4()">Add to cart</button>
+        </div>
+        <div class="dish">
+            <img width="500px" height="270px"  src="https://media.tenor.com/zTUExn1YF3UAAAAM/anime-food.gif" alt="Momos">
+            <h2 id="momos"> Momos </h2>
+            <p> More Tangy the chutney is the more tasty the momos are .</p> <br>
+            <span class="price">Rs:1500</span> <br>
+            <button class="dishbutton"    onclick="addtocart5()">Add to cart</button>
+        </div>
+        <div class="dish">
+            <img  width="500px" height="270px"  src="https://i.makeagif.com/media/11-11-2016/LTHDIZ.gif" alt="Many More">
+            <h2>+Many More</h2>
+            <p> There is no sincerer love than the love of food. .</p> <br>
+      
+            <a href="cart.html" id="mmbutton"> Go to Cart</a>
+        </div>
+    </section> <br>
+     <h2>
+        Total Amount is :</h2>
+     <h2 id="amt"></h2> <br>
+  
+     <a href="order.html" class="orderbutton"> Buy Now </a>
+      <br>
+
+    <footer>
+        <p>&copy; 2023 🍴Khana_Khazana🍴</p>
+    </footer>
+</body>
+</html>
+
+<script src="web.js"></script>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In -🍴Khana_Khazana🍴</title>
+    <link rel="shortcut icon" href="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logoimg"   src="https://as2.ftcdn.net/v2/jpg/03/11/71/81/1000_F_311718170_EPNjAH3HE5LPhftvxgZ4ECpjlubucVSg.jpg" alt="" srcset="">
+            <div class="logo">
+               
+                <a href="home.html"> 🍴Khana_Khazana🍴</a>
+            </div>
+            <ul class="nav-links">
+                
+                <li><a href="web.html">Menu</a></li>
+                <li><a href="contact.html">Feedback</a></li>
+               
+                    <li><a href="home.html">Home</a></li>
+                    <li  id="cart"><a href="cart.html"> 🛒</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sign-in">
+        <h1>Sign In</h1>
+        <form name="submit-to-google-sheet">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="submit-button">Sign In</button>
+        </form>
+
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 🍴Khana_Khazana🍴 </p>
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzH3YQwaKsA1ML7gPIjBkc-HEiGDv9kXO9904RmgXAeHHSS1A4MVjdlfrIFGrAd_3AJ3g/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
+
+<style>
+    body{
+        background-color: #a8a7a7;
+    }
+header {
+    background-color: black;
+    color: rgb(8, 8, 8);
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logoimg{
+    height :4rem ;
+    border-radius: 200px;
+    margin-right: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: black; 
+    /* border-radius: 100px; */
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 1px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+ul{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+   color: rgb(160, 144, 144)
+   
+}
+
+.sign-in {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.sign-in h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.sign-in form {
+    text-align: left;
+}
+
+.sign-in label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.sign-in input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.sign-in .submit-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.sign-in .submit-button:hover {
+    background-color: green;
+}
+
+.sign-in p {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.sign-in a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sign-in a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+</style>
+
+<script>
+    function validateForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const errorText = document.getElementById("form-error");
+
+    if (name.trim() === "" || email.trim() === "" || date.trim() === "" || time.trim() === "") {
+        errorText.textContent = "All fields are required.";
+        return false;
+    }
+
+    if (!validateEmail(email)) {
+        errorText.textContent = "Please enter a valid email address.";
+        return false;
+    }
+
+
+    return true;
+}
+
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+
+
+</script>
